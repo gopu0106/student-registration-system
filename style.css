@@ -1,0 +1,353 @@
+/* ----------------------------
+   Student Registration System
+   style.css
+   ---------------------------- */
+
+/* Reset + Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: #f8faff;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.site-header {
+  background-color: #0a74da;
+  color: #fff;
+  padding: 24px 0 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.site-header h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.site-header .tagline {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.top-nav {
+  margin-top: 10px;
+}
+
+.top-nav a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Card-style Sections */
+#form-section,
+#records-section {
+  background-color: #fff;
+  padding: 18px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+#form-section h2,
+#records-section h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #0a74da;
+}
+
+/* Form Layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+  border-color: #0a74da;
+  outline: none;
+  box-shadow: 0 0 4px rgba(10, 116, 218, 0.3);
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.form-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+#submitBtn {
+  background-color: #0a74da;
+  color: white;
+}
+
+#submitBtn:hover {
+  background-color: #095fbb;
+}
+
+#resetBtn {
+  background-color: #e5e7eb;
+  color: #111;
+}
+
+#resetBtn:hover {
+  background-color: #d1d5db;
+}
+
+.form-msg {
+  margin-top: 8px;
+  min-height: 20px;
+  font-size: 13px;
+  color: #b91c1c;
+}
+
+/* Table Section */
+#records-wrap {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+#studentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#studentsTable th,
+#studentsTable td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#studentsTable th {
+  background-color: #0a74da;
+  color: white;
+}
+
+#studentsTable tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #fbbf24;
+  color: #111;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.85;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  margin: 24px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+/* Mobile (<=640px) */
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  #studentsTable th,
+  #studentsTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+/* Tablet (641px–1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+/* Desktop (>=1025px) */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/* ===== Improved Header Styling ===== */
+.site-header {
+  background: linear-gradient(135deg, #0a74da, #0061a8);
+  color: #fff;
+  padding: 28px 0 22px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.site-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.site-header .tagline {
+  font-size: 15px;
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+
+/* Navigation Links */
+.top-nav {
+  margin-top: 12px;
+}
+
+.top-nav a {
+  color: #fff;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.top-nav a:hover {
+  border-bottom: 2px solid #fff;
+  color: #f1faff;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== Smooth Animations for Sections ===== */
+
+/* Apply a soft fade + slide-in animation to form and table sections */
+#form-section,
+#records-section {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeSlideIn 0.7s ease-in-out forwards;
+}
+
+/* Delay the table animation slightly for a staggered effect */
+#records-section {
+  animation-delay: 0.2s;
+}
+
+/* Define the fade + slide-in keyframes */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Hover Animations for Table Rows ===== */
+#studentsTable tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+#studentsTable tbody tr:hover {
+  background-color: #e8f3ff;
+}
+
+/* ===== Button Hover Animations ===== */
+.form-actions button,
+.action-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-actions button:hover,
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
