@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Student Registration System - Add, edit, and manage students." />
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Student Registration System</h1>
+      <p class="tagline">Register students with their details. Edit, delete, and manage records easily.</p>
+      <nav class="top-nav">
+        <a href="#form-section">Register</a>
+        <a href="#records-section">All Students</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Registration Form -->
+    <section id="form-section">
+      <h2>Add / Edit Student</h2>
+      <form id="studentForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter full name" required />
+          </div>
+          <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="number" id="studentId" name="studentId" placeholder="Enter ID" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required />
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Add Student</button>
+          <button type="reset" id="resetBtn">Reset</button>
+        </div>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </section>
+
+    <!-- Display Records -->
+    <section id="records-section">
+      <h2>Registered Students</h2>
+      <div id="records-wrap">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be injected dynamically -->
+          </tbody>
+        </table>
+        <p id="noDataMsg">No students yet — add the first one above.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Student Registration System</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
