@@ -5,7 +5,7 @@ The project is fully responsive and saves data using **localStorage**.
 
 ---
 
-## ✨ Features
+##  Features
 
 - Add new student details.
 - Edit existing student records.
